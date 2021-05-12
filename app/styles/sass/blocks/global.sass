@@ -1,0 +1,154 @@
+.section-title
+   font-weight: 500
+   font-size: 50px
+   line-height: 97.84%
+   color: #D2D2D2
+   position: relative
+   &.is-active
+      &::after
+         content: ''
+         position: absolute
+         width: 23px
+         height: 23px
+         margin-left: 18px
+         background: $accent
+         top: 50%
+         transform: translateY(-50%)
+            //right: -0px
+         border-radius: 50%
+
+   &-padading
+      margin-right: 40px
+   &--center
+      text-align: center
+   &--circle
+      &-left
+         font-weight: 500
+         font-size: 50px
+         line-height: 97.84%
+         color: #D2D2D2
+         text-align: center
+         position: relative
+         &::after
+            content: ''
+            position: absolute
+            width: 23px
+            height: 23px
+            margin-left: 18px
+            background: $accent
+            top: 50%
+            transform: translateY(-50%)
+            //right: -0px
+            border-radius: 50%
+
+.section-title--circle
+   &-right
+      font-weight: 500
+      font-size: 50px
+      line-height: 97.84%
+      color: #D2D2D2
+      text-align: center
+      margin-left: 470px
+      position: relative
+      //margin-left: 40px
+      &::before
+
+         content: ''
+         position: absolute
+         width: 23px
+         height: 23px
+         margin-right: 18px
+         background: $accent
+         top: 29%
+         display: inline-block
+         transform: translateY(-50%)
+         transform: translateX(-41px)
+         //right: -0px
+         //left: 5px
+         border-radius: 50%
+
+   &.is-active
+      &::before
+         content: ''
+         position: absolute
+         width: 23px
+         height: 23px
+         background: $accent
+         top: 50%
+         transform: translateY(-50%)
+         right: -32px
+         border-radius: 50%
+
+.text
+   font-size: 14px
+   line-height: 117.34%
+   color: $black-text
+   max-width: 422px
+   text-align: justify
+   //width: 100%
+
+.view
+   display: flex
+   align-items: center
+   &--active
+      & .view__circle--left
+         background: $accent
+         &::before
+            content: ''
+                  //width: 37px
+                  //height: 37px
+                  //position: absolute
+                  ////background-image: url('../images/src/arrow-bg-left.svg')
+                  //top: 41%
+                  //right: -29%
+                  //background: $accent
+            background-repeat: no-repeat
+            background-image: url('../images/src/arrow-white-left.svg')
+
+   &:hover
+      & .view__circle--left
+         &::before
+            content: ''
+            //width: 37px
+            //height: 37px
+            //position: absolute
+            ////background-image: url('../images/src/arrow-bg-left.svg')
+            //top: 41%
+            //right: -29%
+            //background: $accent
+            background-repeat: no-repeat
+            background-image: url('../images/src/arrow-white-left.svg')
+
+      & .view__circle--left
+         background: $accent
+
+   &__text
+      font-size: 16px
+      line-height: 117.34%
+      color: #484848
+   &__circle
+      border: 1px solid #FD685D
+      width: 37px
+      height: 37px
+      border-radius: 50%
+      transition: background .2s linear
+      &:hover
+         background: $accent
+      &--left
+         position: relative
+         margin-right: 16px
+
+         &::before
+            content: ''
+            width: 37px
+            height: 37px
+            position: absolute
+            background-image: url('../images/src/arrow-bg-left.svg')
+            top: 41%
+            right: -29%
+            background-repeat: no-repeat
+         &:hover
+            &::before
+               background-image: url('../images/src/arrow-white-left.svg')
+
+            //background: #000

@@ -1,0 +1,157 @@
+// USER VARIABLES SECTION
+
+$accent: #FD685D // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #E5E5E5 // Text Color
+$lineheight: 1.65 // Document Line Height
+$userfont: sfuitext, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+//COLORS-TEXT
+$black-text: #000000
+$white-text: #ffffff
+$tundora: #484848
+
+$white: #ffffff
+$silver: #B8B8B8
+$cuttysark: #4F6367
+
+//SIZE
+$content-size: 1230px
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+@import 'node_modules/swiper/swiper-bundle'
+@import 'app/vendor/micromodal/micromodal'
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+   @font-face
+      font-family: $fname
+      font-style: $fstyle
+      font-weight: $fweight
+      src: url($furl) format('woff2')
+
+@include font('sfuitext', normal, 300, '../fonts/SFUIText-Regular.woff2')
+@include font('sfuitext', normal, 400, '../fonts/SFUIText-Regular.woff2')
+@include font('sfuitext', italic, 400, '../fonts/SFUIText-RegularItalic.woff2')
+@include font('sfuitext', normal, 500, '../fonts/SFUIText-Bold.woff2')
+@include font('sfuitext', normal, 700, '../fonts/SFUIText-Bold.woff2')
+@include font('sfuitext', italic, 700, '../fonts/SFUIText-BoldItalic.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+   color: #666
+
+::selection
+   background-color: $accent
+   color: #fff
+
+input, textarea
+   outline: none
+   &:focus:required:invalid
+      border-color: red
+   &:required:valid
+      border-color: green
+
+body
+   font-family: $userfont
+   font-size: $fontsize
+   line-height: $lineheight
+   color: $textcolor
+   min-width: 320px
+   position: relative
+   overflow-x: hidden
+   background-color: $white
+   &.no-scroll,
+   &.show-sidebar
+      overflow: hidden
+
+.wrapper
+   display: flex
+   flex-direction: column
+   height: 100%
+
+.content
+   flex: 1 0 auto
+
+.container
+   margin: 0 auto
+   max-width: $content-size
+   padding: 0 15px
+   width: 100%
+
+// --- 
+h1, h2, h3, h4, h5, h6
+   margin: 0
+   font-size: inherit
+
+ul, li
+   list-style-type: none
+   margin: 0
+   padding: 0
+
+a
+   text-decoration: none
+   display: inline-block
+   cursor: pointer
+   color: $tundora
+   transition: color .2s ease-in-out
+   &:hover
+      text-decoration: none
+      color: rgba($tundora , .5)
+
+p
+   margin: 0
+
+img,
+.img
+   max-width: 100%
+   height: auto
+   object-fit: cover
+
+*
+   -webkit-box-sizing: border-box
+   -moz-box-sizing: border-box
+   box-sizing: border-box
+   &:before, &:after
+      -webkit-box-sizing: border-box
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+
+*::-webkit-input-placeholder
+   color: #666
+   opacity: 1
+
+*:-moz-placeholder
+   color: #666
+   opacity: 1
+
+*::-moz-placeholder
+   color: #666
+   opacity: 1
+
+*:-ms-input-placeholder
+   color: #666
+   opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+   color: #666
+body input:required:valid,
+body textarea:required:valid
+   color: #666
+
+html, body
+   height: 100%

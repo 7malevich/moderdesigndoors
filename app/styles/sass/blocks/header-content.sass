@@ -1,0 +1,241 @@
+.header
+   &__inner
+      width: 100%
+      height: 84px
+      display: flex
+      justify-content: space-between
+      align-items: center
+   &__left
+      display: flex
+      flex-direction: column
+      //align-items: center
+   &__tell
+      display: flex
+      align-items: center
+      margin-bottom: 14px
+      &-number
+         color: $accent
+         padding-left: 10px
+         font-style: italic
+   &__right
+      display: flex
+      padding-top: 10px
+      //flex: 0 0 500px
+      //text-align: right
+      align-items: center
+   &__user
+      display: flex
+   &__search
+      width: 0px
+      height: 22px
+      background: $white
+      display: flex
+      border-radius: 4px
+      transition: all .5s ease
+      position: relative
+      &-mobile
+         display: none
+      &.active
+         margin-top: 4px
+         width: 282px
+         transition: all .5s ease
+         background: #FFFFFF
+         border: 1px solid #B8B8B8
+         box-sizing: border-box
+         border-radius: 4px
+         margin-right: 10px
+         & .header__search-btn
+            border-left: 1px solid #B8B8B8
+            display: flex
+            align-items: center
+
+      &-input
+         border: 0
+         background: transparent
+         border-radius: 4px
+         width: 0%
+         padding-left: 5px
+         transition: all .3s ease
+         outline: none
+         &.active
+            width: 98%
+            padding-left: 5px
+            transition: all .5s ease
+         &::placeholder
+            font-style: italic
+            font-weight: 300
+            font-size: 10px
+            line-height: 117.34%
+            color: #B8B8B8
+      &-btn
+         position: absolute
+         right: -16px
+         top: -1px
+         padding: 0
+         width: 22px
+         height: 22px
+         cursor: pointer
+         border: none
+         background: transparent
+         margin-right: 20px
+@media only screen and (max-width : 960px)
+   .header__search-input
+      width: 20%
+
+.logo
+   margin-left: 140px
+.navbar
+   &__item
+      display: flex
+   &__drapdown
+      position: absolute
+      display: none
+      z-index: 20
+
+      background: #fff
+      &-list
+         margin-bottom: 6px
+         padding: 2px 10px
+         &:last-child
+            margin-bottom: 0
+         &:first-child
+            margin-top: 6px
+   &__list
+      font-size: 10px
+      line-height: 117.34%
+      margin-right: 16px
+      transition: display .2s ease-in-out, transform .2s ease-in-out
+      &--arrow
+         transition: transform .2s ease-in-out
+      &:last-child
+         margin-right: 0
+      // --- ARROWS DOWNS
+      &:hover
+         transition: transform .2s ease-in-out
+         & .navbar__drapdown
+            display: block
+         & .navbar__list--arrow
+            transform: rotate(180deg)
+      &.navbar__list--arrow
+         padding-right: 10px
+         position: relative
+         &::after
+            content: ''
+            position: absolute
+            background-image: url('../images/src/arrows-down.svg')
+            background-repeat: no-repeat
+            width: 6px
+            height: 4px
+            top: 3px
+            right: 2px
+
+            //transform: translateY(-50%)
+
+.burger
+
+   //display: none
+   //visibility: hidden
+   //align-items: center
+   //display: flex
+   margin-top: 23px
+   cursor: pointer
+   outline: none
+   background: none
+   border: none
+   //position: absolute
+   font-size: 0
+   color: transparent
+   width: 34px
+   height: 24px
+   //top: 34px
+   //left: 24px
+   transform: translateY(-50%)
+   z-index: 50
+   &.active
+      span
+         opacity: 0
+      &::before
+         transform: rotate(45deg)
+      &::after
+         transform: rotate(-45deg)
+      &::before,
+      &::after
+         top: 10px
+
+   &::after,
+   &::before,
+   span
+      display: block
+      width: 100%
+      height: 2px
+      background: #4F6367
+      position: absolute
+      left: 0
+   &::after,
+   &::before
+      transition: transform .2.5s linear
+   &::before
+      content: ''
+      top: 0
+   &::after
+      content: ''
+      bottom: 0
+   span
+      top: 50%
+      transform: translateY(-50%)
+      height: 2px
+      transform: opacity .2s linear
+   .show-burger &
+      z-index: 10
+
+      span
+         opacity: 0
+      &::before
+         transform: rotate(45deg)
+      &::after
+         transform: rotate(-45deg)
+      &::before,
+      &::after
+         top: 45px
+      &.burger--close
+         position: absolute
+         right: 0
+         top: 0
+
+.user-list__item
+   margin-right: 17px
+   z-index: 5
+   &:first-child
+      margin-left: 20px
+   //background: red
+   &:last-child
+      margin-right: 34px
+      //background-color: red
+
+@media only screen and (max-width : 1150px)
+   .logo
+      margin-left: 0
+@media only screen and (max-width : 940px)
+   .header__left-box
+      display: none
+   .header__tell
+      margin-bottom: 0
+@media only screen and (max-width : 824px)
+   .header__left
+      display: none
+@media only screen and (max-width : 768px)
+   .header__search.active
+      width: 198px
+   .header__search-mobile
+      display: block
+   .header__search-dk
+      display: none
+
+@media only screen and (max-width : 550px)
+   .header__user
+      display: none
+   .header__search
+      display: none
+
+   .header__search.active
+      width: 171px

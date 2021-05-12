@@ -1,0 +1,80 @@
+.footer
+   width: 100%
+   height: 510px
+   background: #F8F8F8
+   display: flex
+   align-items: center
+   &__item
+      margin-bottom: 10px
+      &:nth-child(2)
+         margin-right: 20px
+
+   &__top
+      margin-bottom: 70px
+   &__inner
+      display: flex
+      justify-content: space-between
+   &__list
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 97.84%
+      margin-bottom: 8px
+      color: $tundora
+      &-title
+         font-weight: bold
+         font-size: 15px
+         color: $accent
+      &-wave
+         color: $accent
+         font-style: italic
+      &-tags
+         display: flex
+         align-items: center
+         transform: translateX(-29px)
+         &-min
+         & .footer__link
+            font-style: italic
+      &-img
+         margin-right: 14px
+         &-min
+            margin-right: 12px
+   &__bottom
+      display: flex
+      justify-content: flex-end
+
+.soc
+   display: flex
+   align-items: center
+   &__list
+      margin-right: 17px
+      &:last-child
+         margin-right: 0
+   &__link
+      width: 52px
+      height: 52px
+      border-radius: 50%
+      background: #C4C4C4
+@media only screen and (max-width : 947px)
+   .footer__inner
+      //display: flex
+      flex-wrap: wrap
+
+@media only screen and (max-width : 520px)
+   .footer
+      height: 550px
+
+@media only screen and (max-width : 400px)
+   .footer
+      height: 700px
+
+@media only screen and (max-width : 375px)
+   .footer__inner
+      ////align-items: center
+      display: flex
+      flex-direction: column
+      ////justify-content: center
+      //align-items: center
+      margin-left: 64px
+   .footer__item:nth-child(2)
+      margin-right: 0

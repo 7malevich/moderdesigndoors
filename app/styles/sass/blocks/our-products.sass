@@ -1,0 +1,159 @@
+.s-our-products
+   padding-top: 31px
+
+.our-products
+   .section-title--circle-right
+      margin-bottom: 67px
+
+   &__title
+      font-style: italic
+      font-weight: normal
+      font-size: 40px
+      line-height: 97.84%
+      color: #B8D8D8
+      margin-bottom: 55px
+      &--active
+         color: $accent
+   &__text
+      display: flex
+      align-items: flex-end
+      font-style: italic
+      font-weight: normal
+      font-size: 20px
+      line-height: 97.84%
+      color: #D2D2D2
+      margin-bottom: 95px
+   &__photo
+      max-width: 375px
+      min-height: 354px
+      object-fit: cover
+      margin-left: 35px
+   &__item
+      display: flex
+      justify-content: space-between
+      margin-bottom: 137px
+      &:last-child
+         margin-bottom: 90px
+      &:nth-child(2n+1)
+         & .view--left
+            transform: translateX(-40px)
+
+      &:nth-child(2n)
+         & .our-products__text
+            order: 3
+         & .our-products__photo
+            order: 2
+         & .our-products__box
+            order: 1
+            & .view
+               display: flex
+               justify-content: end
+               flex-direction: row-reverse
+               & .view__circle--left
+                  transform: rotate(180deg)
+               & .view__text
+                  margin-right: 13px
+            & .view--left
+               transform: translateX(57px)
+
+   &__box
+      & .text
+         margin-bottom: 130px
+
+@media only screen and (max-width : 1247px)
+   .our-products__item
+      &:nth-child(2n+1)
+         .our-products__box
+            margin-left: 48px
+
+@media only screen and (max-width : 1050px)
+   .our-products__text
+      font-size: 16px
+      white-space: nowrap
+@media only screen and (max-width : 1024px)
+   .our-products__photo
+      margin-left: 20px
+   .our-products__photo
+      max-width: 315px
+      height: 274px
+   .our-products__box .text
+      margin-bottom: 56px
+   .our-products__item:nth-child(2n) .our-products__box .view--left
+      transform: translateX(29px)
+   .our-products__item
+      margin-bottom: 45px
+   .our-products__item:nth-child(2n) .our-products__text
+      padding-left: 7px
+   .section-title--circle-right
+      text-align: center
+      margin-left: auto
+   .our-products .section-title--circle-right
+      margin-bottom: 31px
+   .our-products__item:last-child
+      margin-bottom: 20px
+@media only screen and (max-width : 768px)
+   .section-title--circle-right
+      font-size: 37px
+   .our-products .section-title--circle-right
+      margin-bottom: 10px
+   .section-title--circle-right::before
+      content: ''
+      top: 17%
+   .our-products__title
+      margin-bottom: 15px
+      font-size: 34px
+   .text
+      font-size: 12px
+   .view__text
+      font-size: 14px
+   .our-products__item
+      display: flex
+      flex-direction: column
+      align-items: center
+   .our-products__text
+      margin-bottom: 10px
+   .our-products__text
+      font-size: 26px
+      order: 1
+   .our-products__photo
+      margin-bottom: 12px
+      order: 2
+   .our-products__box
+      order: 3
+   .our-products__item:nth-child(2n+1) .our-products__box
+      margin-left: 0
+   .our-products__box
+      .text
+         max-width: 556px
+   .our-products__box .text
+      margin-bottom: 10px
+   .our-products__item:nth-child(2n+1) .view--left
+      transform: translateX(0px)
+   .our-products__item:nth-child(2n) .our-products__box
+      order: 3
+   .our-products__item:nth-child(2n) .our-products__text
+      order: 1
+   .our-products__item
+      margin-bottom: 25px
+   .our-products__photo
+      margin-left: 0
+   .our-products__item:nth-child(2n) .our-products__box .view--left
+      transform: translateX(18px)
+
+@media only screen and (max-width : 425px)
+   .section-title--circle-right
+      font-size: 28px
+.section-title--circle-right::before
+   content: ''
+   position: absolute
+   width: 15px
+   height: 15px
+   transform: translateX(-27px)
+@media only screen and (max-width : 375px)
+   .our-products__photo
+      max-width: 301px
+      min-height: 275px
+      object-fit: cover
+   .our-products__title
+      margin-bottom: 14px
+      font-size: 32px

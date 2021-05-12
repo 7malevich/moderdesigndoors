@@ -1,0 +1,18 @@
+.sidebar {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+}
+.sidebar__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.sidebar__list {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.sidebar__list:last-child {
+  margin-bottom: 0;
+}

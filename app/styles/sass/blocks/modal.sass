@@ -1,0 +1,136 @@
+.modal
+   z-index: 10000
+   position: absolute
+   overflow-y: hidden
+   &__close
+      color: #fff
+      opacity: .25
+      transition: opacity .25s ease-in
+      &:hover
+         opacity: 1
+
+   &__container
+      background-color: #fff
+      box-shadow: 0px 10px 50px rgba(161, 189, 227, 0.17)
+      border-radius: 90px 2px 2px 2px
+      padding: 25px
+      max-width: 575px
+      width: 100%
+      min-height: 420px
+      max-height: 100vh
+      overflow-y: auto
+      -webkit-box-sizing: border-box
+      box-sizing: border-box
+
+.register
+   &__check
+      display: flex
+      margin: 30px 0 60px 0
+      justify-content: center
+      &-text
+         font-weight: 600
+         font-size: 12px
+         line-height: 170%
+         letter-spacing: 0.06em
+         text-transform: uppercase
+         color: #ED6B6A
+         border-bottom: 1px solid #FFDCDC
+
+      &-label
+         margin-right: 40px
+         display: flex
+         font-weight: 600
+         font-size: 12px
+         line-height: 170%
+         letter-spacing: 0.06em
+         cursor: pointer
+         text-transform: uppercase
+      &-style
+         width: 18px
+         height: 18px
+         border-radius: 4px
+         border: solid 1px $accent
+         background: #fff
+         margin-right: 13px
+      &-input
+         position: absolute
+         width: 1px
+         height: 1px
+         overflow: hidden
+         clip: rect(0 0 0 0)
+         &:checked
+            & + .register__check-style
+               position: relative
+               background: $accent
+               background-image: url(../img/src/check-okk.svg)
+               background-repeat: no-repeat
+               background-position: center
+   &__capch
+      display: flex
+      &-img
+         margin-right: 18px
+         max-width: 155px
+         height: 48px
+         object-fit: fill
+      &-number
+         background: #FFFFFF
+         border: 1px solid #DBE7FF
+         border-radius: 2px
+         height: 48px
+         width: 100%
+         padding: 14px 20px
+         &:hover
+            &:placeholder
+               color: red
+   &__item
+      margin-bottom: 35px
+      &:last-child
+         margin-bottom: 50px
+
+   &__form-input
+      width: 100%
+      border: none
+      padding-bottom: 13px
+      border-bottom: solid 1px #DBE7FF
+      display: block
+      &::placeholder
+         font-weight: normal
+         font-size: 16px
+         line-height: 170%
+         letter-spacing: 0.04em
+         color: #93A0B9
+      &:focus
+         border-bottom-color: $accent
+   &-catigories
+      display: flex
+      margin-bottom: 55px
+      &__list
+         font-weight: bold
+         font-size: 22px
+         line-height: 130%
+         color: #93A0B9
+         padding: 0 49px 32px 49px
+         width: 100%
+         border-bottom: 1px solid #DBE7FF
+         transition: border-bottom .2s linear
+         &:hover
+            color: rgba(#ED6B6A, .5 )
+            border-bottom: 1px solid rgba(#000 , .5 )
+
+         &.tabs-catigories__list--active
+            color: #ED6B6A
+            position: relative
+            border-bottom: 1px solid #ED6B6A
+            width: 100%
+
+@media only screen and (max-width : 768px)
+   .register__item
+      margin-bottom: 10px
+@media only screen and (max-width : 768px)
+   .modal__container
+      max-width: 396px
+@media only screen and (max-width : 425px)
+   .modal__container
+      padding: 10px 10px 10px 10px
+   .modal__close
+      margin-left: 25px

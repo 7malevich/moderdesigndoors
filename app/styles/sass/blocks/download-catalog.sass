@@ -1,0 +1,251 @@
+.s-download
+   position: relative
+.download
+   &__arrow-left
+      //position: absolute
+      //width: 60%
+      //height: 1.8px
+      //background-color: $accent
+      //top: 453px
+      //right: 0
+
+   &-catigories
+      margin-top: 22px
+      display: flex
+      justify-content: center
+
+      &-padding
+         margin-right: 250px
+      & .section-title
+         margin-bottom: 102px
+      &__list
+         margin-right: 126px
+         cursor: pointer
+         &:last-child
+            margin-right: 0
+         &:hover
+         &.tabs-catigories__list--active
+
+.tab
+   display: none
+   &.is-active
+      display: block
+      font-weight: bold
+
+.catalog
+   position: relative
+   &::before
+      content: ''
+      background-image: url('../images/src/arrows-bg-left.svg')
+      width: 100%
+      height: 9px
+      top: 301px
+      right: -56%
+      background-repeat: no-repeat
+      position: absolute
+      z-index: 2
+   &:after
+      content: ''
+      background-image: url('../images/src/arrows-bg-right.svg')
+      width: 100%
+      height: 9px
+      top: 701px
+      left: -210px
+      background-repeat: no-repeat
+      position: absolute
+      z-index: -1
+   &__free
+      position: relative
+      margin-bottom: 220px
+   &__freesamples
+      position: absolute
+      right: 100px
+      top: -311px
+   &__title
+      font-weight: bold
+      font-size: 60px
+      line-height: 97.84%
+      color: #4F6367
+      margin-bottom: 29px
+      &-center
+         text-align: center
+         margin-left: 272px
+      &-margin
+         margin-left: 170px
+   &__inner
+      &-box
+         text-align: center
+         position: relative
+         margin-bottom: 84px
+   &__photo-catalog
+      position: absolute
+      top: -126px
+      left: -170px
+      z-index: 5
+   &__box
+      width: 600px
+      height: 576px
+      background: #F8F8F8
+      position: relative
+      display: flex
+      justify-content: center
+      display: inline-block
+      &-btn
+         font-style: normal
+         font-weight: normal
+         font-size: 25px
+         line-height: 97.84%
+         color: #484848
+         padding: 21px 64px
+         margin: 0
+         border: 2px solid $accent
+         border-radius: 40px
+         background: transparent
+         cursor: pointer
+         transition: background .2s ease-in-out
+         &:hover
+            background: $accent
+         &-download
+            cursor: pointer
+            position: absolute
+            top: 110px
+            right: -40px
+         &-get
+            position: absolute
+            bottom: 43px
+            left: 56px
+            cursor: pointer
+            z-index: 10
+.catalog__box-btn-download
+   z-index: 20
+@media only screen and (max-width : 1200px)
+   .catalog__title-margin
+      margin-left: 0px
+   .download-catigories-padding
+      margin-right: 0
+   .catalog__photo-catalog
+      top: -93px
+@media only screen and (max-width : 1024px)
+   .download-catigories .section-title
+      margin-bottom: 42px
+   .catalog__free
+      margin-bottom: 0
+   img.catalog__freesamples
+      width: 400px
+      height: 400px
+      object-fit: contain
+   .catalog__photo-catalog
+      left: -112px
+      top: -58px
+      width: 619px
+   .catalog__freesamples
+      right: 1px
+      top: -415px
+   .catalog__title-margin
+      margin-left: 0
+      transform: translateY(-274px)
+   .catalog__title
+      font-size: 50px
+
+@media only screen and (max-width : 900px)
+   .download-catigories
+      .section-title
+         font-size: 40px
+@media only screen and (max-width : 768px)
+   .download-catigories__list
+      margin-right: 0
+   .download-catigories
+      align-items: center
+      display: flex
+      flex-direction: column
+   .download-catigories .section-title
+      &:first-child
+         margin-bottom: 15px
+
+   .catalog__box-btn
+      padding: 9px 30px
+   .catalog__title
+      font-size: 40px
+   .catalog__title-margin
+      margin-left: 0
+      transform: translateY(-229px)
+   .catalog:after,
+   .catalog::before
+      display: none
+
+@media only screen and (max-width : 700px)
+   .s-download
+      margin-bottom: 100px
+
+   .catalog__photo-catalog
+      left: 23%
+      top: 40px
+      width: 400px
+      height: 310px
+   .catalog__title-center
+      margin-left: 0
+   .catalog__box-btn-download
+      right: 50%
+      top: 9px
+   .catalog__freesamples
+      right: 1px
+      top: -232px
+   .catalog__box
+      height: 390px
+   .catalog__box-btn
+      padding: 7px 17px
+   .catalog__box-btn-get
+      left: -7px
+   .catalog__box-btn-download
+      right: 32%
+   .catalog__box-btn
+      font-size: 18px
+   .catalog__photo-catalog
+      left: -78px
+      top: -39px
+   .catalog__title
+      font-size: 36px
+   img.catalog__freesamples
+      height: 400px
+@media only screen and (max-width : 540px)
+   .download-catigories
+      .section-title
+         font-size: 30px
+   .section-title.is-active::after
+      content: ''
+      position: absolute
+      width: 17px !important
+      height: 17px !important
+      margin-left: 18px
+      background: #fd685d
+      top: 50%
+   .catalog__title
+      font-size: 30px
+@media only screen and (max-width : 425px)
+   .download-catigories .section-title
+      font-size: 22px
+   img.catalog__freesamples
+      height: 320px
+   .catalog__photo-catalog
+      left: -13px
+      top: -39px
+      margin-bottom: 20px
+   .catalog__title
+      font-size: 28px
+      text-align: center
+      &:nth-child(2)
+         padding-top: 30px
+         margin-bottom: 10px
+   .catalog__box-btn-download
+      right: 62%
+      top: 217px
+   .catalog__title-margin
+      transform: translateY(-204px)
+   .catalog__box-btn-get
+      left: 30%
+      bottom: -243px
+   img.catalog__freesamples
+      height: 393px
+      width: 358px
+   .s-download
+      margin-bottom: 140px

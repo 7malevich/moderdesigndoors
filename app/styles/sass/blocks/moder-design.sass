@@ -1,0 +1,107 @@
+.s-about
+   width: 100%
+   min-height: 640px
+   background: #F8F8F8
+   padding-top: 23px
+   & .container
+      & .section-title--circle-left
+         margin-bottom: 75px
+.about
+   display: flex
+   justify-content: space-between
+   &__video
+      //position: relative
+      //padding: 0 0 50% 0
+      &-play
+         width: 600px
+         height: 355px
+         //position: absolute
+         //top: 0
+         //left: 0
+         //width: 100%
+         //height: 100%
+
+         //min-width: 100%
+         object-fit: fill
+   &__item
+      //width: 50%
+   &-title
+      font-style: normal
+      font-weight: bold
+      font-size: 60px
+      line-height: 97.84%
+      color: #4F6367
+      margin-bottom: 22px
+      span
+         color: $accent
+   &-suptitle
+      font-weight: 300
+      font-size: 45px
+      line-height: 117.34%
+      color: #141414
+      margin-bottom: 68px
+
+button.ytp-large-play-button
+   background: url('../images/src/play.svg')
+   height: value
+   width: value
+
+button.ytp-large-play-button svg
+   display: none
+
+@media only screen and (max-width : 1160px)
+   .text
+      max-width: 377px
+   .about__item
+      .about-title
+         font-size: 44px
+         margin-bottom: 7px
+      .about-suptitle
+         font-size: 37px
+@media only screen and (max-width : 1024px)
+   .about
+      display: flex
+      flex-direction: column
+      align-items: center
+   .s-about .container .section-title--circle-left
+      margin-bottom: 20px
+   .about-suptitle
+      margin-bottom: 30px
+   .about__item
+      .text
+         max-width: 600px
+         margin-bottom: 20px
+   .about__item .about-title
+      font-size: 39px
+   .about__item .about-suptitle
+      font-size: 29px
+
+@media only screen and (max-width : 618px)
+   .s-about
+      min-height: 537px
+   .about__video-play
+      width: 400px
+      height: 233px
+@media only screen and (max-width : 425px)
+   .about__video-play
+      width: 350px
+      height: 207px
+
+@media only screen and (max-width : 375px)
+   .about__video-play
+      width: 302px
+      height: 176px
+   //.about__video
+   //   position: relative
+   //   margin: 0 0 15px 0
+   //   padding: 0 0 50% 0
+
+   //.about__video-play
+   //   position: absolute
+   //   top: 0
+   //   left: 0
+   //   width: 100%
+   //   height: 100%
+   //   //width: 100%
+   ////   height: 100%
+   ////   position: absolute
