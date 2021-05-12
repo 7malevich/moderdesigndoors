@@ -83,7 +83,8 @@
       left: -170px
       z-index: 5
    &__box
-      width: 600px
+      max-width: 600px
+      width: 100%
       height: 576px
       background: #F8F8F8
       position: relative
@@ -207,6 +208,10 @@
       font-size: 36px
    img.catalog__freesamples
       height: 400px
+@media only screen and (max-width : 604px)
+   .catalog__box-btn-download
+      right: 2%
+
 @media only screen and (max-width : 540px)
    .download-catigories
       .section-title
@@ -237,7 +242,7 @@
          padding-top: 30px
          margin-bottom: 10px
    .catalog__box-btn-download
-      right: 62%
+      right: 50%
       top: 217px
    .catalog__title-margin
       transform: translateY(-204px)
